@@ -1,6 +1,6 @@
 title: dhodgkin.com
-tagline: Just my blog... about... uh... nothing
-description: Personal blog and notes from Damien Hodgkin.
+tagline: Personal blog of Damien Hodgkin.
+description: A personal blog and notes from Damien Hodgkin, covering topics such as software development, programming languages, and technology.
 url: "https://dhodgkin.com"
 baseurl: ""
 lang: en
@@ -9,6 +9,7 @@ author:
   name: Damien Hodgkin
   email: dracul01@gmail.com
   github: https://github.com/dhodgkin
+  github_org: https://github.com/Purple-Druid
   url: https://dhodgkin.com
 
 permalink: pretty
@@ -26,6 +27,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-fontawesome-svg
 
 feed:
   path: atom.xml
