@@ -10,6 +10,9 @@ pin: true
 ## {{ page.title }}
 
 posted on: {{ page.date | date_to_string }}
+{% if page.pin %}
+  📌 Pinned Post
+{% endif %}
 {: .meta}
 
 We are excited to announce the release of **AgentEmerald**, a cutting-edge AI agent designed to enhance personal productivity by automating tasks and providing intelligent assistance. AgentEmerald is built on the latest advancements in artificial intelligence and machine learning, making it a powerful tool for individuals looking to optimize their daily routines and workflows. <!--more-->

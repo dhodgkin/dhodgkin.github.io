@@ -5,7 +5,7 @@ title: dhodgkin.com - Home
 
 <div id="home" class="home-feed">
   <span class="section-label">Latest writing</span>
-  <h2 class="section-title">Recent posts</h2>
+  <h2 class="section-title">Pinned posts</h2>
   <ul class="posts">
     {% assign pinned = site.posts | where_exp: "item", "item.pin == true" %}
     {% for post in pinned %}
@@ -15,10 +15,11 @@ title: dhodgkin.com - Home
         {% else %}
           <div>{{ post.content }}</div>
         {% endif %}
-        <p><a href="{{ post.url | relative_url }} 📌">Read full post &rarr;</a></p>
+        <p><a href="{{ post.url | relative_url }}">Read full post &rarr;</a></p>
       </li>
     {% endfor %}
     
+    <h2 class="section-title">Recent posts</h2>
     {% for post in paginator.posts %}
       {% unless post.pin == true %}
         <li class="post-preview reveal">
