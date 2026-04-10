@@ -1,4 +1,4 @@
-title: dhodgkin.github.io
+title: dhodgkin.com
 tagline: Just my blog... about... uh... nothing
 description: Personal blog and notes from Damien Hodgkin.
 url: "https://dhodgkin.com"
@@ -9,6 +9,7 @@ author:
   name: Damien Hodgkin
   email: dracul01@gmail.com
   github: https://github.com/dhodgkin
+  url: https://dhodgkin.com
 
 permalink: pretty
 paginate: 5
