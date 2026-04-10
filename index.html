@@ -20,14 +20,16 @@ title: dhodgkin.com - Home
     {% endfor %}
     
     {% for post in paginator.posts %}
-      <li class="post-preview reveal">
-        {% if post.content contains '<!--more-->' %}
-          <div>{{ post.content | split:'<!--more-->' | first }}</div>
-        {% else %}
-          <div>{{ post.content }}</div>
-        {% endif %}
-        <p><a href="{{ post.url | relative_url }}">Read full post &rarr;</a></p>
-      </li>
+      {% unless post.pin == true %}
+        <li class="post-preview reveal">
+          {% if post.content contains '<!--more-->' %}
+            <div>{{ post.content | split:'<!--more-->' | first }}</div>
+          {% else %}
+            <div>{{ post.content }}</div>
+          {% endif %}
+          <p><a href="{{ post.url | relative_url }}">Read full post &rarr;</a></p>
+        </li>
+      {% endunless %}
     {% endfor %}
   </ul>
 
