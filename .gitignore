@@ -12,6 +12,7 @@
 /vendor/cache/
 /vendor/gems/
 /vendor/ruby/
+Gemfile.lock
 
 # Optional local JS dependencies
 /node_modules/
