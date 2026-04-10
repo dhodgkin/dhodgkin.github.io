@@ -1,33 +1,22 @@
-    <!-- Page Footer start -->
-    <footer class="footer">
-      <div>
-        <div class="copytext">
-          <p>All content belongs to me unless otherwise stated.</p>
-          <p>Find me here <a href="{{ site.author.github }}">{{ site.author.github }}</a></p>
-          <p>Copyright © by {{ site.author.name }} &lt;{{ site.author.email }}&gt; 2012.<br>All Right Reserved.</p>
-        </div>
-      </div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <svg width="20" height="20" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <polygon points="14,2 24,8 24,20 14,26 4,20 4,8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        <circle cx="14" cy="14" r="2.5" fill="currentColor"/>
+      </svg>
+      <span>{{ site.title }}</span>
+    </div>
 
-      <div id="thanks">
-        <div id="thanksbox" class="thanksbox" style="display: none; ">
-          <p class="thanks">Thanks <a href="http://github.com/mojombo/">Tim Preston-Werner</a> for some CSS code I used from your site.<br>And some small snippets from your layout to get posts showing.</p>
-          <p class="thanks">Thanks to <a href="http://github.com">GitHub</a> for an amazingly cool tool.</p>
-          <p class="thanks">And thanks to anyone who is not mentioned.<br>You all helped me in various ways.</p>
-        </div>
-        <ul class="thanks-actions"></ul>
-      </div>
-    </footer>
-    <!-- Page Footer end -->
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="{{ '/archive/' | relative_url }}">Archive</a>
+      <a href="{{ '/pages/' | relative_url }}">Pages</a>
+      <a href="{{ site.author.github }}" rel="noopener noreferrer">GitHub</a>
+      <a href="{{ '/atom.xml' | relative_url }}">Feed</a>
+    </nav>
 
-    <script> //<![CDATA[    
-       $(document).ready(function(){
-          $("#thanksbox").hide();
-          $("#thanks ul").prepend("<li class='thanks'><a href='' title='Thanks'>Thanks</a></li>");
-          $(".thanks-actions li.thanks a").click(function(event) {
-            $(this).parents("ul").prev("#thanksbox").toggle();
-            event.preventDefault();
-          });
-       });
-     //]]></script>
-
-    <a href="http://github.com/dhodgkin"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
+    <p class="footer-copy">
+      &copy; {{ site.time | date: "%Y" }} {{ site.author.name }} · Built with Jekyll
+    </p>
+  </div>
+</footer>

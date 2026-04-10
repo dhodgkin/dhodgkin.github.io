@@ -3,24 +3,24 @@ layout: default
 title: dhodgkin.github.io - Home
 ---
 
-<div id="home">
+<div id="home" class="home-feed">
+  <span class="section-label">Latest writing</span>
+  <h2 class="section-title">Recent posts</h2>
   <ul class="posts">
     {% for post in paginator.posts %}
-      <div id="post">
-      {% if post.content contains '<!--more-->' %}
+      <li class="post-preview reveal">
+        {% if post.content contains '<!--more-->' %}
           <div>{{ post.content | split:'<!--more-->' | first }}</div>
-          <p><a href="{{ post.url }}">&lt;read more and comment...&gt;</a></p>
-      {% else %}
+        {% else %}
           <div>{{ post.content }}</div>
-          <p><a href="{{ post.url }}">&lt;read more and comment...&gt;</a></p>
-      {% endif %}
-      </div>
-      <br>
+        {% endif %}
+        <p><a href="{{ post.url | relative_url }}">Read full post &rarr;</a></p>
+      </li>
     {% endfor %}
   </ul>
 
   {% if paginator.total_pages > 1 %}
-  <div class="pagination">
+  <div class="pagination" role="navigation" aria-label="Pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path | relative_url }}">
       &laquo; Prev
@@ -31,9 +31,9 @@ title: dhodgkin.github.io - Home
 
   {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
-      <em>{{ page }}</em>
+      <em class="page-current">{{ page }}</em>
     {% elsif page == 1 %}
-      <a href="{{ paginator.previous_page_path | relative_url }}">
+      <a href="{{ '/' | relative_url }}">
         {{ page }}
       </a>
     {% else %}

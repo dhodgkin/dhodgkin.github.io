@@ -1,13 +1,15 @@
-    <!-- Left Sidebar start -->
-    <div class="sidebar_container">
-      <div id="sidebar_content">
-        <ul>
-          <li><a href="/">&lt; Home -- &gt;</a></li>
-          <!-- <li><a href="/categories">&lt; Categories -------- &gt;</a></li> -->
-          <li><a href="/archive/">&lt; Archive &gt;</a></li>
-          <li><a href="/pages/">&lt; Pages - &gt;</a></li>
-          <!-- <li><a href="/tags/">&lt; Tags -------------- &gt;</a></li> -->
-        </ul>
-      </div>
-    </div>
-    <!-- Left Sidebar end   -->
+<aside class="sidebar_container">
+  <nav id="sidebar_content" class="side-nav-card reveal" aria-label="Secondary navigation">
+    <h2 class="side-nav-title">Explore</h2>
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/archive/' | relative_url }}">Archive</a></li>
+      <li><a href="{{ '/pages/' | relative_url }}">Pages</a></li>
+      <li><a href="{{ '/categories/' | relative_url }}">Categories</a></li>
+      <li><a href="{{ '/tags/' | relative_url }}">Tags</a></li>
+      <li><a href="{{ '/privacy-policy.html' | relative_url }}">Privacy policy</a></li>
+      <li><a href="{{ '/term-of-service.html' | relative_url }}">Terms of service</a></li>
+      <li><a href="{{ '/atom.xml' | relative_url }}">Feed</a></li>
+    </ul>
+  </nav>
+</aside>

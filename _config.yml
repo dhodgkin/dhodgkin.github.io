@@ -1,46 +1,51 @@
-# This is the default format. 
-# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: pretty  #/:categories/:year/:month/:day/:title 
-paginate: 5
-excerpt_separator: <!--more-->
+title: dhodgkin.github.io
+tagline: Just my blog... about... uh... nothing
+description: Personal blog and notes from Damien Hodgkin.
+url: "https://dhodgkin.com"
+baseurl: ""
+lang: en
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-#auto: true
+author:
+  name: Damien Hodgkin
+  email: dracul01@gmail.com
+  github: https://github.com/dhodgkin
+  twitter: https://twitter.com/dthodgkin
+
+permalink: pretty
+paginate: 5
+paginate_path: "/page:num/"
+excerpt_separator: "<!--more-->"
+
 markdown: kramdown
 highlighter: rouge
+kramdown:
+  input: GFM
 
-plugins: [jekyll-paginate]
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
-# Themes are encouraged to use these universal variables 
-# so be sure to set them if your theme uses them.
-#
-title : dhodgkin.github.io
-tagline: Just my blog... about... uh... nothing
-author :
-  name : Damien Hodgkin
-  email : dracul01@gmail.com
-  github : http://github.com/dhodgkin
-  twitter : http://twitter.com/dthodgkin
-  #feedburner : feedname
+feed:
+  path: atom.xml
 
-# Settings for comments helper
-# Set 'provider' to the comment provider you want to use.
-# Set 'provider' to false to turn commenting off globally.
-#
-comments :
-  provider : facebook
-  facebook :
-    appid : 128742020513581
-    num_posts: 5
-    width: 580
-    colorscheme: dark
+exclude:
+  - .rvmrc
+  - .rbenv-version
+  - README.md
+  - Rakefile
+  - changelog.md
 
-# The production_url is only used when full-domain names are needed
-# such as sitemap.txt 
-# Most places will/should use BASE_PATH to make the urls
-#
-# If you have set a CNAME (pages.github.com) set your custom domain here.
-# Else if you are pushing to username.github.com, replace with your username.
-# Finally if you are pushing to a GitHub project page, include the project name at the end.
-#
-production_url : http://dhodgkin.github.io
+production_url: "https://dhodgkin.com"
+
+JB:
+  comments:
+    provider: false
+  analytics:
+    provider: false
+  sharing:
+    provider: false
+  categories_path: /categories/
+  tags_path: /tags/
+  atom_path: /atom.xml
