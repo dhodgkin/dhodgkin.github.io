@@ -33,6 +33,18 @@ feed:
 exclude:
   - .rvmrc
   - .rbenv-version
+  - .bundle
+  - .jekyll-cache
+  - .jekyll-metadata
+  - .sass-cache
+  - node_modules
+  - vendor
+  - vendor/bundle
+  - vendor/cache
+  - vendor/gems
+  - vendor/ruby
+  - Gemfile
+  - Gemfile.lock
   - README.md
   - Rakefile
   - changelog.md
