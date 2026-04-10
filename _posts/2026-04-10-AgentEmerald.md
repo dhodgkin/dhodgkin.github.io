@@ -4,6 +4,7 @@ title: "AgentEmerald - An AI Agent for Personal Productivity"
 description: "Release of AgentEmerald, an AI agent designed to enhance personal productivity by automating tasks and providing intelligent assistance."
 category: AI Agents
 tags: ["AI", "Productivity", "Automation", "AgentEmerald"]
+pin: true
 ---
 
 ## {{ page.title }}
@@ -11,7 +12,7 @@ tags: ["AI", "Productivity", "Automation", "AgentEmerald"]
 posted on: {{ page.date | date_to_string }}
 {: .meta}
 
-We are excited to announce the release of **AgentEmerald**, a cutting-edge AI agent designed to enhance personal productivity by automating tasks and providing intelligent assistance. AgentEmerald is built on the latest advancements in artificial intelligence and machine learning, making it a powerful tool for individuals looking to optimize their daily routines and workflows.
+We are excited to announce the release of **AgentEmerald**, a cutting-edge AI agent designed to enhance personal productivity by automating tasks and providing intelligent assistance. AgentEmerald is built on the latest advancements in artificial intelligence and machine learning, making it a powerful tool for individuals looking to optimize their daily routines and workflows. <!--more-->
 
 ### Key Features of AgentEmerald
 
@@ -30,6 +31,6 @@ We are committed to continuously improving AgentEmerald and adding new features 
 
 We believe that AgentEmerald has the potential to revolutionize the way people manage their productivity and we are excited to see how users will leverage its capabilities to enhance their daily lives.
 
-For more information about AgentEmerald and to sign up for an account, please visit our website at [www.agem.dhodgkin.com](http://www.agem.dhodgkin.com).
+For more information about AgentEmerald and to sign up for an account, please visit our website at [agem.dhodgkin.com](https://agem.dhodgkin.com).
 
 We look forward to hearing your feedback and seeing how AgentEmerald can help you achieve your productivity goals!

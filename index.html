@@ -7,6 +7,18 @@ title: dhodgkin.com - Home
   <span class="section-label">Latest writing</span>
   <h2 class="section-title">Recent posts</h2>
   <ul class="posts">
+    {% assign pinned = site.posts | where_exp: "item", "item.pinned == true" %}
+    {% for post in pinned %}
+      <li class="post-preview reveal">
+        {% if post.content contains '<!--more-->' %}
+          <div>{{ post.content | split:'<!--more-->' | first }}</div>
+        {% else %}
+          <div>{{ post.content }}</div>
+        {% endif %}
+        <p><a href="{{ post.url | relative_url }} 📌">Read full post &rarr;</a></p>
+      </li>
+    {% endfor %}
+    
     {% for post in paginator.posts %}
       <li class="post-preview reveal">
         {% if post.content contains '<!--more-->' %}
