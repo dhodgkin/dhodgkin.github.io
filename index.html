@@ -7,7 +7,7 @@ title: dhodgkin.com - Home
   <span class="section-label">Latest writing</span>
   <h2 class="section-title">Recent posts</h2>
   <ul class="posts">
-    {% assign pinned = site.posts | where_exp: "item", "item.pinned == true" %}
+    {% assign pinned = site.posts | where_exp: "item", "item.pin == true" %}
     {% for post in pinned %}
       <li class="post-preview reveal">
         {% if post.content contains '<!--more-->' %}
