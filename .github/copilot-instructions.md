@@ -18,8 +18,8 @@
 - Rendering pipeline is:
   1. Content files (`index.html`, `archive.html`, `tags.html`, `categories.html`, `pages.html`, `_posts/*.md`)
   2. `_layouts/{default,page,post}.html`
-  3. `_includes/themes/agem-theme/*` partials (header/sidebar/footer/page/post wrappers)
-- The home page (`index.html`) depends on `paginator.posts` and uses `<!--more-->` to decide preview cutoffs.
+  3. `_includes/themes/agem-theme/*` partials (header/footer/page/post wrappers)
+- The home page (`index.html`) depends on `paginator.posts` and renders `post.excerpt`; excerpt cutoffs are controlled by `_config.yml` `excerpt_separator` (`<!--more-->`).
 - Taxonomy/archive pages use Jekyll Bootstrap helpers in `_includes/JB/*` (`posts_collate`, `pages_list`, `tags_list`, `categories_list`).
 - Theme styling/behavior is implemented in `css/agem-theme.css` and `javascripts/main.js` (theme toggle + reveal animation).
 
@@ -27,8 +27,9 @@
 
 - **Edit source, not output:** `_site/` is generated build output and is gitignored.
 - **Current active theme path is `themes/agem-theme`:** `_layouts/*.html` includes `themes/agem-theme/*` directly.
+- **Legacy theme files remain for fallback only:** `_includes/themes/dhodgkin/*` and `css/stylesheet.css` are not part of the active render path.
 - **Internal URLs:** use Liquid `| relative_url` for links to keep local/dev/prod URLs correct.
 - **Post front matter shape:** posts consistently use `layout: post`, `title`, `description`, `category` (singular), and `tags` (array).
-- **Post excerpts on home:** include `<!--more-->` in post content to control where home-page previews stop.
-- **Navigation updates are duplicated in theme partials:** if adding/removing nav links, update both `header.html` and `sidebar.html` under `_includes/themes/agem-theme/`.
-- **Legal pages use explicit `.html` permalinks:** keep sidebar links and `permalink` values aligned for `privacy-policy.html` and `term-of-service.html`.
+- **Post excerpts on home:** add `<!--more-->` in post content to control `post.excerpt` cutoffs used by the homepage feed.
+- **Navigation ownership:** global navigation lives in `header.html` and `footer.html` under `_includes/themes/agem-theme/`.
+- **Legal pages use explicit `.html` permalinks:** keep header/footer links and `permalink` values aligned for `privacy-policy.html` and `term-of-service.html`.

@@ -1,0 +1,14 @@
+---
+layout: page
+title: dhodgkin.github.io - Pages
+header: Pages
+group: navigation
+permalink: /pages/
+---
+{% include JB/setup %}
+
+<h2>All Pages</h2>
+<ul>
+{% assign pages_list = site.pages %}
+{% include JB/pages_list %}
+</ul>

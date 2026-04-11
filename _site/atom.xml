@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://dhodgkin.com/atom.xml" rel="self" type="application/atom+xml" /><link href="https://dhodgkin.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-04-10T23:41:56-04:00</updated><id>https://dhodgkin.com/atom.xml</id><title type="html">dhodgkin.com</title><subtitle>A personal blog and notes from Damien Hodgkin, covering topics such as software development, programming languages, and technology.</subtitle><author><name>Damien Hodgkin</name><email>dracul01@gmail.com</email></author><entry><title type="html">AgentEmerald - An AI Agent for Personal Productivity</title><link href="https://dhodgkin.com/ai%20agents/2026/04/10/AgentEmerald/" rel="alternate" type="text/html" title="AgentEmerald - An AI Agent for Personal Productivity" /><published>2026-04-10T00:00:00-04:00</published><updated>2026-04-10T00:00:00-04:00</updated><id>https://dhodgkin.com/ai%20agents/2026/04/10/AgentEmerald</id><content type="html" xml:base="https://dhodgkin.com/ai%20agents/2026/04/10/AgentEmerald/"><![CDATA[<h2 id="agentemerald---an-ai-agent-for-personal-productivity">AgentEmerald - An AI Agent for Personal Productivity</h2>
+
+<p>posted on: 10 Apr 2026</p>
+
+<svg class="icon"><use xlink:href="#fas.fa-thumbtack"></use></svg>
+
+<p class="meta">We are excited to announce the release of <strong>AgentEmerald</strong>, a cutting-edge AI agent designed to enhance personal productivity by automating tasks and providing intelligent assistance. AgentEmerald is built on the latest advancements in artificial intelligence and machine learning, making it a powerful tool for individuals looking to optimize their daily routines and workflows. <!--more--></p>
+
+<h3 id="key-features-of-agentemerald">Key Features of AgentEmerald</h3>
+
+<ul>
+  <li><strong>Task Automation</strong>: AgentEmerald can automate a wide range of tasks, from scheduling meetings and managing emails to organizing files and setting reminders. This allows users to focus on more important activities while AgentEmerald takes care of the routine tasks.</li>
+  <li><strong>Intelligent Assistance</strong>: AgentEmerald provides intelligent assistance by understanding user preferences and habits. It can offer personalized recommendations, suggest productivity tips, and even help with decision-making based on the user’s goals and priorities.</li>
+  <li><strong>Natural Language Processing</strong>: With advanced natural language processing capabilities, AgentEmerald can understand and respond to user commands in a conversational manner. This makes it easy for users to interact with the agent and get the assistance they need without having to learn complex commands or interfaces.</li>
+  <li><strong>Integration with Popular Tools</strong>: AgentEmerald seamlessly integrates with popular productivity tools such as calendar apps, email clients, and project management software. This allows users to centralize their productivity efforts and streamline their workflows.</li>
+</ul>
+
+<h3 id="how-to-get-started-with-agentemerald">How to Get Started with AgentEmerald</h3>
+
+<p>Getting started with AgentEmerald is easy. Simply visit our website and sign up for an account. Once you have an account, you can download the AgentEmerald app and start using it right away. The app is available for both desktop and mobile platforms, ensuring that you can access your AI assistant wherever you are.</p>
+
+<h3 id="future-developments">Future Developments</h3>
+
+<p>We are committed to continuously improving AgentEmerald and adding new features based on user feedback. In the coming months, we plan to introduce additional integrations with more productivity tools, enhance the natural language processing capabilities, and expand the range of tasks that AgentEmerald can automate.</p>
+
+<p>We believe that AgentEmerald has the potential to revolutionize the way people manage their productivity and we are excited to see how users will leverage its capabilities to enhance their daily lives.</p>
+
+<p>For more information about AgentEmerald and to sign up for an account, please visit our website at <a href="https://agem.dhodgkin.com">agem.dhodgkin.com</a>.</p>
+
+<p>We look forward to hearing your feedback and seeing how AgentEmerald can help you achieve your productivity goals!</p>]]></content><author><name>Damien Hodgkin</name><email>dracul01@gmail.com</email></author><category term="AI Agents" /><category term="AI" /><category term="Productivity" /><category term="Automation" /><category term="AgentEmerald" /><summary type="html"><![CDATA[Release of AgentEmerald, an AI agent designed to enhance personal productivity by automating tasks and providing intelligent assistance.]]></summary></entry><entry><title type="html">new post</title><link href="https://dhodgkin.com/uncategorized/2026/04/10/new-post/" rel="alternate" type="text/html" title="new post" /><published>2026-04-10T00:00:00-04:00</published><updated>2026-04-10T00:00:00-04:00</updated><id>https://dhodgkin.com/uncategorized/2026/04/10/new-post</id><content type="html" xml:base="https://dhodgkin.com/uncategorized/2026/04/10/new-post/"><![CDATA[<h2 id="new-post">new post</h2>
+
+<p class="meta">posted on: 10 Apr 2026</p>]]></content><author><name>Damien Hodgkin</name><email>dracul01@gmail.com</email></author><category term="Uncategorized" /><summary type="html"><![CDATA[new post posted on: 10 Apr 2026]]></summary></entry></feed>

@@ -16,23 +16,18 @@
         <div class="container hero-content">
           <div class="hero-badge">
             <span class="dot" aria-hidden="true"></span>
-            agem-theme · terminal inspired
+            streamlined terminal design
           </div>
           <h1 class="hero-title">{{ site.title }}</h1>
           <p class="hero-tagline">
             {{ site.description | default: site.tagline }}
           </p>
-          <div class="hero-actions">
-            <a class="btn-primary" href="{{ '/archive/' | relative_url }}">Browse archive</a>
-            <a class="btn-ghost" href="{{ '/pages/' | relative_url }}">View pages</a>
-          </div>
         </div>
       </section>
       {% endif %}
 
       <section class="section content-section">
-        <div class="container layout-grid">
-          {% include themes/agem-theme/sidebar.html %}
+        <div class="container content-shell">
           <section id="main_content" class="content-card reveal">{{ content }}</section>
         </div>
       </section>

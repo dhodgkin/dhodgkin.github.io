@@ -32,6 +32,9 @@ plugins:
 feed:
   path: atom.xml
 
+include:
+  - _pages
+
 comments:
   enabled: true
   utterances:
@@ -59,6 +62,7 @@ exclude:
   - README.md
   - Rakefile
   - changelog.md
+  - post-archive
 
 production_url: "https://dhodgkin.com"
 

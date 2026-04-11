@@ -1,5 +1,5 @@
 # Generated Jekyll output
-/_site/
+# /_site/
 
 # Jekyll and Sass caches
 /.jekyll-cache/
@@ -24,4 +24,4 @@
 .DS_Store
 *.swp
 *~
-/post-archive/
+# /post-archive/

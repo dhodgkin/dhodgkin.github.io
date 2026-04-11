@@ -5,35 +5,39 @@ title: dhodgkin.com - Home
 
 <div id="home" class="home-feed">
   <span class="section-label">Latest writing</span>
-  <h2 class="section-title">Pinned posts</h2>
-  <ul class="posts">
-    {% assign pinned = site.posts | where_exp: "item", "item.pin == true" %}
-    {% for post in pinned %}
-      <li class="post-preview reveal">
-        {% if post.content contains '<!--more-->' %}
-          <div>{{ post.content | split:'<!--more-->' | first }}</div>
-        {% else %}
-          <div>{{ post.content }}</div>
-        {% endif %}
-        <p><a href="{{ post.url | relative_url }}">Read full post &rarr;</a></p>
-      </li>
-    {% endfor %}
-    
-    <br>
-    <h2 class="section-title">Recent posts</h2>
-    {% for post in paginator.posts %}
-      {% unless post.pin == true %}
+  {% assign pinned_posts = site.posts | where_exp: "item", "item.pin == true" %}
+  {% assign regular_posts = paginator.posts | where_exp: "item", "item.pin != true" %}
+
+  {% if pinned_posts.size > 0 %}
+  <section class="feed-group">
+    <h2 class="section-title">Pinned posts</h2>
+    <ul class="posts">
+      {% for post in pinned_posts %}
         <li class="post-preview reveal">
-          {% if post.content contains '<!--more-->' %}
-            <div>{{ post.content | split:'<!--more-->' | first }}</div>
-          {% else %}
-            <div>{{ post.content }}</div>
-          {% endif %}
+          <div>{{ post.excerpt }}</div>
           <p><a href="{{ post.url | relative_url }}">Read full post &rarr;</a></p>
         </li>
-      {% endunless %}
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if regular_posts.size > 0 %}
+  <section class="feed-group">
+    <h2 class="section-title">{% if pinned_posts.size > 0 %}Recent posts{% else %}Posts{% endif %}</h2>
+      <ul class="posts">
+      {% for post in regular_posts %}
+        <li class="post-preview reveal">
+          <div>{{ post.excerpt }}</div>
+          <p><a href="{{ post.url | relative_url }}">Read full post &rarr;</a></p>
+        </li>
+      {% endfor %}
+      </ul>
+  {% else %}
+    <p class="empty-state">No recent posts yet.</p>
+  </section>
+  {% endif %}
+
 
   {% if paginator.total_pages > 1 %}
   <div class="pagination" role="navigation" aria-label="Pagination">

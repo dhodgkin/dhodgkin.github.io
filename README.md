@@ -21,9 +21,25 @@ Personal blog source for **https://dhodgkin.com**, built with Jekyll and hosted 
 bundle exec jekyll build
 ```
 
+Fresh clean build:
+
+```bash
+bundle exec rake fresh_build
+```
+
+## Content scaffolding
+
+Both scaffold tasks are interactive and prompt for YAML front matter fields.
+
+```bash
+bundle exec rake post
+bundle exec rake page
+```
+
 ## Project structure
 
 - `_posts/` blog posts
+- `_pages/` non-post pages (archive, tags, legal pages, etc.)
 - `_layouts/` page layouts
 - `_includes/` reusable theme partials
 - `css/` site styles
