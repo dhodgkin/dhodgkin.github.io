@@ -11,7 +11,7 @@ pin: true
 
 posted on: {{ page.date | date_to_string }}
 {% if page.pin %}
-   Pinned Post {% fa_svg fas.fa-thumbtack %}
+   {% fa_svg fas.fa-thumbtack %}
 {% endif %}
 {: .meta}
 

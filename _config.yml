@@ -32,6 +32,15 @@ plugins:
 feed:
   path: atom.xml
 
+comments:
+  enabled: true
+  utterances:
+    repo: "dhodgkin/dhodgkin.github.io"
+    issue_term: "pathname"
+    label: "comments"
+    theme_light: "github-light"
+    theme_dark: "github-dark"
+
 exclude:
   - .rvmrc
   - .rbenv-version

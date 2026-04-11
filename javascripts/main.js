@@ -18,6 +18,7 @@
   function applyTheme(nextTheme) {
     root.setAttribute("data-theme", nextTheme);
     localStorage.setItem(storageKey, nextTheme);
+    window.dispatchEvent(new CustomEvent("site-theme-change", { detail: { theme: nextTheme } }));
 
     if (toggle) {
       toggle.setAttribute("aria-label", "Switch to " + (nextTheme === "dark" ? "light" : "dark") + " mode");
@@ -32,6 +33,11 @@
       theme = theme === "dark" ? "light" : "dark";
       applyTheme(theme);
     });
+  }
+
+  var heroActions = document.querySelector(".hero-actions");
+  if (heroActions) {
+    heroActions.remove();
   }
 
   var revealTargets = document.querySelectorAll(".reveal");

@@ -1,0 +1,53 @@
+{% if site.comments and site.comments.enabled and site.comments.utterances and site.comments.utterances.repo and page.comments != false %}
+<section class="reveal" aria-label="Comments">
+  <h2 class="section-title">Comments</h2>
+  <div id="utterances_thread"></div>
+  <noscript>Please enable JavaScript to view comments.</noscript>
+
+  <script>
+    (function () {
+      var thread = document.getElementById("utterances_thread");
+      if (!thread || thread.dataset.initialized === "true") {
+        return;
+      }
+
+      var lightTheme = "{{ site.comments.utterances.theme_light | default: 'github-light' }}";
+      var darkTheme = "{{ site.comments.utterances.theme_dark | default: 'github-dark' }}";
+
+      function siteTheme() {
+        return document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+      }
+
+      function utterancesTheme(theme) {
+        return theme === "light" ? lightTheme : darkTheme;
+      }
+
+      var script = document.createElement("script");
+      script.src = "https://utteranc.es/client.js";
+      script.async = true;
+      script.crossOrigin = "anonymous";
+      script.setAttribute("repo", "{{ site.comments.utterances.repo }}");
+      script.setAttribute("issue-term", "{{ site.comments.utterances.issue_term | default: 'pathname' }}");
+      {% if site.comments.utterances.label %}
+      script.setAttribute("label", "{{ site.comments.utterances.label }}");
+      {% endif %}
+      script.setAttribute("theme", utterancesTheme(siteTheme()));
+      thread.appendChild(script);
+      thread.dataset.initialized = "true";
+
+      window.addEventListener("site-theme-change", function (event) {
+        var iframe = thread.querySelector("iframe.utterances-frame");
+        if (!iframe || !iframe.contentWindow) {
+          return;
+        }
+
+        var nextTheme = event && event.detail && event.detail.theme ? event.detail.theme : siteTheme();
+        iframe.contentWindow.postMessage(
+          { type: "set-theme", theme: utterancesTheme(nextTheme) },
+          "https://utteranc.es"
+        );
+      });
+    })();
+  </script>
+</section>
+{% endif %}

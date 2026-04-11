@@ -32,3 +32,8 @@ bundle exec jekyll build
 ## Publishing
 
 Push to the default branch and GitHub Pages serves the site using the `CNAME` in this repository.
+
+## Comments
+
+Post comments are powered by [Utterances](https://utteranc.es/) and use GitHub issues in this repository.
+If comments do not appear yet, install/enable the Utterances GitHub app for `dhodgkin/dhodgkin.github.io`.
